@@ -7,15 +7,15 @@ var Restaurant = db.define('restaurant', {
     },
     cuisine: {
         type: Sequelize.STRING
-        //defaultValue: [],
-        // set: function(cuisine) {
-        //     cuisine = cuisine || [];
-        //     if (typeof cuisine === 'string') {
-        //         cuisine = cuisine.split(",")
-        //     }
-        // this.setDataValue('cuisine', cuisine)
-        // },
-        // allowNull: false
+            // defaultValue: [],
+            // set: function (cuisine) {
+            //     cuisine = cuisine || [];
+            //     if (typeof cuisine === 'string') {
+            //         cuisine = cuisine.split(",")
+            //     }
+            //     this.setDataValue('cuisine', cuisine)
+            // },
+            // allowNull: false
     },
     price: {
         type: Sequelize.INTEGER,

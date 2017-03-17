@@ -6,6 +6,7 @@ var nunjucks = require('nunjucks');
 //var models = require('./models')
 
 var db = require('./models')
+var router = require('./routes');
 
 var app = express();
 
@@ -19,9 +20,7 @@ app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 var env = nunjucks.configure('views', { noCache: true });
 
-app.get('/', function (req, res) {
-    res.render('index');
-})
+app.use('/', router); // mounts the router on the express instance
 
 // error handler
 // catch 404 (i.e., no route was hit) and forward to error handler
@@ -38,7 +37,7 @@ app.use(function (err, req, res, next) {
     res.render('error');
 });
 
-db.sync({ force: true })
+db.sync({})
     .then(function () {
         app.listen(3001, function () {
             console.log('Server is listening on port 3001!');

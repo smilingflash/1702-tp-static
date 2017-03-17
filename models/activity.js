@@ -7,8 +7,6 @@ var Activity = db.define('activity', {
     },
     age_range: {
         type: Sequelize.STRING
-
-        
     }
 });
 
