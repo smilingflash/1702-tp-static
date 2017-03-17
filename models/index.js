@@ -5,4 +5,6 @@ var db = new Sequelize('postgres://localhost:5432/tripPlanner', {
 });
 
 
-module.exports = db;
+module.exports = {
+    db: db
+};
