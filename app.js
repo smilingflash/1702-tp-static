@@ -3,8 +3,9 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var nunjucks = require('nunjucks');
-var models = require('./models')
-var db = models.db; // same as require('./models').db;
+//var models = require('./models')
+
+var db = require('./models')
 
 var app = express();
 
